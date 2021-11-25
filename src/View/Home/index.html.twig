@@ -1,23 +1,27 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class="title"><span class="banana">Banana</span><spana class="mood">Mood</span></h1>
+    <div id="haut"></div>
     <form class="acceuil-form" method="get">
-        <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="500"/></label>
+        <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="600"/></label>
         <div id="masqued">
             <input type="text" id="answer" name="answer" required>
             <button class="acceuil-button" type="submit">Enjoy</button>
         </div>
     </form>
+    <h1 id="title"><span id="banana">Banana</span><spana id="mood">Mood</span></h1>
     <script>
 
         document.getElementById("masqued").style.display = 'none';
 
         function affichage(){
             document.getElementById("masqued").style.display = 'block';
+            document.getElementById('haut').appendChild(document.getElementById('title'));
+            document.getElementById('banana').style.color = "#fbe84e";
+            document.getElementById('mood').style.color = "white";
         }        
 
-        setTimeout(affichage, 2000);
+        setTimeout(affichage, 2500);
         
     </script>
 

@@ -9,10 +9,16 @@ body{
     margin: auto;
 }
 
-.title{
-    font-family: 'DM serif display';
+#masqued button{
+    display: block;
 }
 
-.mood{
+#title{
+    font-family: 'DM serif display';
+    text-align: center;
+    font-size: 3rem;
+}
+
+#mood{
     color: #fbe84e;
 }
