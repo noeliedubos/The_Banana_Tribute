@@ -9,7 +9,6 @@
             <button class="acceuil-button" type="submit">Enjoy</button>
         </div>
     </form>
-
     <script>
 
         document.getElementById("masqued").style.display = 'none';
@@ -21,4 +20,7 @@
         setTimeout(affichage, 2000);
         
     </script>
+
+    <iframe src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    
 {% endblock %}
