@@ -1,3 +1,7 @@
+body{
+    background-color: #fffada;
+}
+
 .acceuil-form{
     display: flex;
     flex-direction: column;
@@ -5,3 +9,10 @@
     margin: auto;
 }
 
+.title{
+    font-family: 'DM serif display';
+}
+
+.mood{
+    color: #fbe84e;
+}
