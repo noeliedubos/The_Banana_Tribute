@@ -2,9 +2,8 @@
 
 {% block content %}
     <h1 class="title"><span class="banana">Banana</span><span class="mood">Mood</span></h1>
-    {# <img class="bubbleImg" src="/assets/images/bulle.png" alt="bulle acceuil"/> #}
+    <p class = "caVa">Comment<br> ça va ?</p>
     <form class="acceuil-form" method="get">
-        <label for="answer"><img class="bananaImg" src="/assets/images/Banane_peau.svg" alt="banane acceuil"/></label>
         <div id="masqued">
             <input type="text" id="answer" name="answer" required>
             <button class="acceuil-button" type="submit">Enjoy</button>
@@ -22,6 +21,6 @@
         
     </script>
 
-    <iframe src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe class="iframe" src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="max-width: 100%"></iframe>
     
 {% endblock %}
