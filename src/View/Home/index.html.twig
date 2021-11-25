@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class="title"><span class="banana">Banana</span><spana class="mood">Mood</span></h1>
+    <h1 class="title"><span class="banana">Banana</span><span class="mood">Mood</span></h1>
+    {# <img class="bubbleImg" src="/assets/images/bulle.png" alt="bulle acceuil"/> #}
     <form class="acceuil-form" method="get">
-        <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="500"/></label>
+        <label for="answer"><img class="bananaImg" src="/assets/images/Banane_peau.svg" alt="banane acceuil"/></label>
         <div id="masqued">
             <input type="text" id="answer" name="answer" required>
             <button class="acceuil-button" type="submit">Enjoy</button>

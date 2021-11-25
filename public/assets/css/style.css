@@ -1,5 +1,11 @@
+/* css home */
+
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #fffada;
+    background-image: url(/assets/images/bulle.png);
 }
 
 .acceuil-form{
@@ -16,3 +22,17 @@ body{
 .mood{
     color: #fbe84e;
 }
+.bubbleImg
+{
+    position:relative;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.banana
+    {
+    color:white;
+    }
+
+
+    /* css playlist */
