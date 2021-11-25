@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\PlaylistManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -19,8 +21,11 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function index($answer = "")
     {
-        return $this->twig->render('Home/index.html.twig');
+        $playlistManager = new PlaylistManager();
+        $playlist = $playlistManager->selectByIdAndTag($answer);
+
+        return $this->twig->render('Home/index.html.twig', ['playlist' => $playlist]);
     }
 }
