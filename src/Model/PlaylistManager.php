@@ -7,12 +7,14 @@ class PlaylistManager extends AbstractManager
     public const TABLE = 'playlist';
     public const JOINTABLE = "tag";
 
-    public function selectByIdAndTag(string $tag): array
+    public function selectByIdAndTag($answer)
     {
-        $query = "SELECT t.tag, p.name, p.url 
-        FROM " . static::TABLE . ' p JOIN ' . static::JOINTABLE . " t 
-        ON p.id = t.playlist_id WHERE t.tag = '" . $tag . "';";
+        $statement = $this->pdo->prepare("SELECT t.tag, p.name, p.url 
+        FROM playlist p JOIN tag t ON p.id = t.playlist_id 
+        WHERE t.tag = :answer");
+        $statement->bindValue('answer', $answer, \PDO::PARAM_STR);
+        $statement->execute();
 
-        return $this->pdo->query($query)->fetchAll();
+        return $statement->fetch();
     }
 }

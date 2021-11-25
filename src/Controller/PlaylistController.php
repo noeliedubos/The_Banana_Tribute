@@ -9,10 +9,8 @@ class PlaylistController extends AbstractController
 
     public function getPlaylistUrl()
     {
-        $tag = $_GET['answer'];
         $playlistManager = new PlaylistManager();
-        $playlist = $playlistManager->selectByIdAndTag($tag);
-
+        $playlist = $playlistManager->selectAll();
         return $this->twig->render('Home/index.twig.html', ['playlist' => $playlist]);
     }
 }

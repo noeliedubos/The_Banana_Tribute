@@ -61,11 +61,11 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `playlist` (`name`, `url`) VALUES
-("Sad Song", 'https://open.spotify.com/playlist/37i9dQZF1DX7qK8ma5wgG1?si=b29954b8abb148ff'),
-("Ambiant Relaxation", 'https://open.spotify.com/playlist/37i9dQZF1DX3Ogo9pFvBkY?si=4c292170144047d5'),
-("Happy Hits!", 'https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC?si=c6b32b4f2c1d48de'),
-("Chill Vibes", 'https://open.spotify.com/playlist/37i9dQZF1DX889U0CL85jj?si=83349a9c65764347'),
-("Dance Hits 2000", 'https://open.spotify.com/playlist/37i9dQZF1DWSj4n2q6ZYVe?si=16f62e9858b84a24');
+("Sad Song", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX7qK8ma5wgG1?utm_source=generator'),
+("Ambiant Relaxation", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX3Ogo9pFvBkY'),
+("Happy Hits!", 'https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC?si=c6b32b4f2c1d48de'),
+("Chill Vibes", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX889U0CL85jj?si=83349a9c65764347'),
+("Dance Hits 2000", 'https://open.spotify.com/embed/playlist/37i9dQZF1DWSj4n2q6ZYVe?si=16f62e9858b84a24');
 
 --
 -- Ajout de données dans la table playlist
