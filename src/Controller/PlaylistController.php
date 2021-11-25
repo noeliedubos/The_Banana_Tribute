@@ -7,8 +7,9 @@ use App\Model\PlaylistManager;
 class PlaylistController extends AbstractController
 {
 
-    public function getPlaylistUrl(string $tag)
+    public function getPlaylistUrl()
     {
+        $tag = $_GET['answer'];
         $playlistManager = new PlaylistManager();
         $playlist = $playlistManager->selectByIdAndTag($tag);
 
