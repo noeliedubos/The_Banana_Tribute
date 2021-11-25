@@ -1,11 +1,26 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class="title">Banana mood</h1>
+    <h1 class="title"><span class="banana">Banana</span><spana class="mood">Mood</span></h1>
     <form class="acceuil-form" method="get">
-        <label for="answer"><!-- Image banane --></label>
-        <input type="text" id="answer" name="answer" required>
-        <button type="submit">Enjoy</button>
+        <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="500"/></label>
+        <div id="masqued">
+            <input type="text" id="answer" name="answer" required>
+            <button class="acceuil-button" type="submit">Enjoy</button>
+        </div>
     </form>
+    <script>
+
+        document.getElementById("masqued").style.display = 'none';
+
+        function affichage(){
+            document.getElementById("masqued").style.display = 'block';
+        }        
+
+        setTimeout(affichage, 2000);
+        
+    </script>
+
     <iframe src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    
 {% endblock %}
