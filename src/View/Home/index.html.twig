@@ -6,7 +6,7 @@
         <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="600"/></label>
         <div id="masqued">
             <input type="text" id="answer" name="answer" required>
-            <button class="acceuil-button" type="submit">Enjoy</button>
+            <button id="acceuil-button" type="submit">Enjoy</button>
         </div>
     </form>
     <h1 id="title"><span id="banana">Banana</span><spana id="mood">Mood</span></h1>
@@ -19,6 +19,11 @@
             document.getElementById('haut').appendChild(document.getElementById('title'));
             document.getElementById('banana').style.color = "#fbe84e";
             document.getElementById('mood').style.color = "white";
+
+            //Aprés clique
+            document.getElementById("acceuil-button").addEventListener('click', function(){
+                
+            });
         }        
 
         setTimeout(affichage, 2500);
