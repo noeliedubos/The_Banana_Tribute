@@ -1,5 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <h1 class="title">Banana mood</h1>
+    <form class="acceuil-form" method="get">
+        <label for="answer"><!-- Image banane --></label>
+        <input type="text" id="answer" name="answer" required>
+        <button type="submit">Enjoy</button>
+    </form>
 {% endblock %}
