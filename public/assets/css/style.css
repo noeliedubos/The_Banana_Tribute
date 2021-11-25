@@ -1,38 +1,53 @@
 /* css home */
-
 body{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: #fffada;
     background-image: url(/assets/images/bulle.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/assets/images/Banane_peau.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
 }
 
 .acceuil-form{
     display: flex;
     flex-direction: column;
-    width : 50vw;
-    margin: auto;
 }
 
 .title{
     font-family: 'DM serif display';
-}
+    font-size: 36px;
 
+}
+.caVa{
+    color:white;
+    font-size : 72px;
+    font-family: 'DM Serif Display';
+    margin-top: 0;
+}
 .mood{
     color: #fbe84e;
 }
-.bubbleImg
-{
-    position:relative;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
-}
 .banana
-    {
+{
     color:white;
-    }
-
-
+}
     /* css playlist */
