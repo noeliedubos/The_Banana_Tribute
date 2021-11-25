@@ -23,41 +23,57 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `item`
+-- Suppression de la base de donnée si déjà existante
 --
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
+DROP DATABASE IF EXISTS the_banana_tribute;
+
+--
+-- Création de la base
+--
+
+CREATE DATABASE the_banana_tribute;
+USE the_banana_tribute;
+
+--
+-- Création et structure de la table `playlist`
+--
+
+CREATE TABLE `playlist` (
+  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `item`
+-- Création et structure de la table `tag`
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+CREATE TABLE `tag` (
+  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `tag` varchar(255) NOT NULL,
+  `playlist_id` INT NOT NULL,
+  FOREIGN KEY (playlist_id) REFERENCES playlist(id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index pour les tables exportées
+-- Ajout de données dans la table playlist
 --
 
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+INSERT INTO `playlist` (`name`, `url`) VALUES
+("Sad Song", 'https://open.spotify.com/playlist/37i9dQZF1DX7qK8ma5wgG1?si=b29954b8abb148ff'),
+("Ambiant Relaxation", 'https://open.spotify.com/playlist/37i9dQZF1DX3Ogo9pFvBkY?si=4c292170144047d5'),
+("Happy Hits!", 'https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC?si=c6b32b4f2c1d48de'),
+("Chill Vibes", 'https://open.spotify.com/playlist/37i9dQZF1DX889U0CL85jj?si=83349a9c65764347'),
+("Dance Hits 2000", 'https://open.spotify.com/playlist/37i9dQZF1DWSj4n2q6ZYVe?si=16f62e9858b84a24');
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- Ajout de données dans la table playlist
 --
 
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `tag` (`tag`, `playlist_id`) VALUES
+("triste", 1),
+("calme", 2),
+("heureux", 3),
+("chill", 4),
+("festif", 5);
