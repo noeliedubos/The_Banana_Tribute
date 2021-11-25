@@ -11,7 +11,6 @@ class PlaylistController extends AbstractController
     {
         $playlistManager = new PlaylistManager();
         $playlist = $playlistManager->selectByIdAndTag($answer);
-        var_dump($playlist);
         return $this->twig->render('Home/index.html.twig', ['playlist' => $playlist]);
     }
 }
