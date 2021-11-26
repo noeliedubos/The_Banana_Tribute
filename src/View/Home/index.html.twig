@@ -2,14 +2,18 @@
 
 {% block content %}
     <div id="haut"></div>
+    <p class = "caVa">Comment<br> ça va ?</p>
+
     <form class="acceuil-form" method="get">
-        <label for="answer"><img src="/assets/images/Banane_peau.svg" alt="banane acceuil" width="600"/></label>
         <div id="masqued">
-            <input type="text" id="answer" name="answer" required>
-            <button id="acceuil-button" type="submit">Enjoy</button>
+            <input type="text" id="answer" name="answer" placeholder="Joyeux ou dépressif par exemple !">
+            <button id="acceuil-button" type="submit">Ecoutez</button>
         </div>
     </form>
-    <h1 id="title"><span id="banana">Banana</span><spana id="mood">Mood</span></h1>
+
+    <h1 id="title"><span class="banana">Banana</span><span class="mood">Mood</span></h1>
+    
+    <iframe class="iframe" src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="max-width: 100%"></iframe>
     <script>
 
         document.getElementById("masqued").style.display = 'none';
@@ -26,10 +30,7 @@
             });
         }        
 
-        setTimeout(affichage, 2500);
+        setTimeout(affichage, 300);
         
     </script>
-
-    <iframe src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    
 {% endblock %}

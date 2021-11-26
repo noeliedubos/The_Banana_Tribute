@@ -9,12 +9,13 @@ class PlaylistManager extends AbstractManager
 
     public function selectByIdAndTag($answer)
     {
-        $statement = $this->pdo->prepare("SELECT t.tag, p.name, p.url 
-        FROM playlist p JOIN tag t ON p.id = t.playlist_id 
-        WHERE t.tag = :answer");
-        $statement->bindValue('answer', $answer, \PDO::PARAM_STR);
-        $statement->execute();
+        if ($answer) {
+            $statement = $this->pdo->prepare("SELECT t.tag, p.name, p.url 
+            FROM playlist p JOIN tag t ON p.id = t.playlist_id 
+            WHERE t.tag IN ('" . str_replace(" ", "', '", $answer) . "');");
 
-        return $statement->fetch();
+            $statement->execute();
+            return $statement->fetch();
+        }
     }
 }
