@@ -4,7 +4,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #fffada;
+    background-color: #fdf2ab;
     background-image: url(/assets/images/bulle.png);
     background-repeat: no-repeat;
     background-size: 100% 40%;
@@ -31,7 +31,7 @@ body::before {
     text-align: center;
 }
 
-#masqued button{
+#masqued1 button{
     display: block;
 }
 
@@ -49,13 +49,12 @@ body::before {
 
 }
 
-.mood{
+#mood{
     color: #fbe84e;
 }
 
-.banana
-{
-    color:white;
+#banana{
+    color:black;
 }
 
 #acceuil-button{
