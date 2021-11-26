@@ -42,6 +42,9 @@ body::before {
     margin-top: 0;
 }
 
+#title a{
+    text-decoration: none;
+}
 
 .caVa{
     color:white;
