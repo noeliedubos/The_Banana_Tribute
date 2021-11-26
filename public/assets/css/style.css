@@ -68,8 +68,7 @@ body::before {
     font-family: 'DM Serif Display';
     background-color: black;
     border: 2px solid black;
-    border-radius: 40px;
-    font-size: xx-large;
+    border-radius: 45px;
 }
 .acceuil-icon{
     height:50px;
@@ -86,8 +85,9 @@ body::before {
     border: 1px solid black;
     background-color: #fdf2ab;
     padding: 0.5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
+    font-size: large;
 }
 
 .decal{
