@@ -3,12 +3,12 @@
 {% block content %}
     <div id="haut"></div>
     <p id="masqued2" class = "caVa">La playlist<br>qui vous ecoute!</p>
-    <form class="acceuil-form" method="get">
-        <legend>Ton humeur génère ta playlist</legend>
-        <div class="form" id="masqued1">
-            <input type="text" id="answer" name="answer" placeholder=" 😀 Balance ton mood">
-            <button id="acceuil-button" type="submit"><img class="acceuil-icon" src="/assets/images/paper_plane.svg"></button>
+    <form class="acceuil-form" id="masqued1" method="get">
+        <div id="answer" style="display: flex; align-items: baseline">
+            <div>😀 |</div>
+            <input type="text" name="answer" placeholder="Balance ton mood">
         </div>
+        <button id="acceuil-button" type="submit"><img class="acceuil-icon" src="/assets/images/paper_plane.svg"></button>
     </form>
     <div class="decal"></div>
     <div class="decal"></div>
@@ -25,8 +25,8 @@
         document.body.style.backgroundImage = "none";
         
         if(window.location.search === "") {
-            document.getElementById("masqued1").style.display = 'block';
-            document.getElementById("masqued2").style.display = 'block';
+            document.getElementById("masqued1").style.display = 'flex';
+            document.getElementById("masqued2").style.display = 'initial';
             document.body.style.backgroundImage = "url(/assets/images/bulle.png)";
             document.getElementById("iframe").style.height = '250';
             document.getElementById("iframe").style.width = '100%';

@@ -18,7 +18,7 @@ body::before {
     content: '';
     width: 100%;
     height: 50%;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -35%);
     background-image: url(/assets/images/Banane_peau.svg);
@@ -29,6 +29,11 @@ body::before {
 
 .acceuil-form{
     margin-top: 30vh;
+    align-items: center;
+}
+
+#masqued1 {
+    display: flex;
     align-items: center;
 }
 
@@ -67,11 +72,12 @@ body::before {
 #acceuil-button{
     font-family: 'DM Serif Display';
     background-color: black;
-    border: 2px solid black;
-    border-radius: 45px;
+    border: 4px solid black;
+    border-bottom-right-radius: 45px;
+    border-top-right-radius: 45px;
 }
 .acceuil-icon{
-    height:50px;
+    height:30px;
 }
 #acceuil-button:hover{
     background-color: black;
@@ -86,16 +92,19 @@ legend{
 }
 
 #answer{
-    text-align: center;
-
-    border-radius: 30px; 
+    border-bottom-left-radius: 30px; 
+    border-top-left-radius: 30px; 
     border: 2px solid black;
     background-color: #fdf2ab;
     padding: 0.5rem;
-    margin-bottom: 2rem;
     font-size: large;
+    flex-grow: 1;
 }
-
+#answer input {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
 .decal{
     margin-top: 20%;
 }
