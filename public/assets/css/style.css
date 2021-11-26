@@ -10,6 +10,7 @@ body{
     background-size: 100% 40%;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 body::before {
@@ -38,7 +39,6 @@ body::before {
 #title{
     font-family: 'DM serif display';
     text-align: center;
-    font-size: 3rem;
 }
 
 .caVa{
@@ -46,7 +46,7 @@ body::before {
     font-size : 60px;
     font-family: 'DM Serif Display';
     margin-top: 0;
-
+    text-align: center;
 }
 
 #mood{
