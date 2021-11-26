@@ -33,7 +33,7 @@ body::before {
 }
 
 #masqued1 button{
-    display: block;
+   align-self: center;
 }
 
 #title{
