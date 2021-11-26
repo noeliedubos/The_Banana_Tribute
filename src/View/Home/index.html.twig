@@ -6,17 +6,13 @@
 
     <form class="acceuil-form" method="get">
         <div id="masqued1">
-            <input type="text" id="answer" name="answer" placeholder="Joyeux ou dépressif par exemple !">
+            <input type="text" id="answer" name="answer" placeholder=" 😀 Ecris ton humeur du jour">
             <button id="acceuil-button" type="submit"><img class="acceuil-icon" src="/assets/images/paper_plane.svg"></button>
         </div>
     </form>
     <div class="decal"></div>
-    <h1 id="title"><span id="banana">Banana</span><span id="mood">Mood</span></h1>
     <div class="decal"></div>
     <iframe id="iframe" title="deezer-widget" src="{{playlist.url}}" width="100%" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-
-
-    <iframe title="deezer-widget" src="{{playlist.url}}" width="100%" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
 
     <h1 id="title"><a href="../"><span id="banana">Banana</span><span id="mood">Mood</span></a></h1>
     
@@ -25,26 +21,22 @@
         document.getElementById("masqued1").style.display = 'none';
         document.getElementById("masqued2").style.display = 'none';
 
-        document.getElementById("iframe").style.display = 'none';
+
         document.body.style.backgroundImage = "none";
         
-        if(window.location.search === "")
-            setTimeout(affichage, 3000);
-        else{
-            document.body.style.backgroundColor = "black";
-            document.getElementById('haut').appendChild(document.getElementById('title'));
-            document.getElementById('banana').style.color = "#fbe84e";
-            document.getElementById('mood').style.color = "white";
-        }
-
-        function affichage(){
+        if(window.location.search === "") {
             document.getElementById("masqued1").style.display = 'block';
             document.getElementById("masqued2").style.display = 'block';
             document.body.style.backgroundImage = "url(/assets/images/bulle.png)";
+            document.getElementById("iframe").style.height = '250';
+            document.getElementById("iframe").style.width = '100%';
+        } else{
+            document.body.style.backgroundColor = "black";
 
-            document.getElementById('haut').appendChild(document.getElementById('title'));
-            document.getElementById('banana').style.color = "#fbe84e";
-            document.getElementById('mood').style.color = "white";
-        }                
+        }
+
+        document.getElementById('haut').appendChild(document.getElementById('title'));
+        document.getElementById('banana').style.color = "#fbe84e";
+        document.getElementById('mood').style.color = "white";
     </script>
 {% endblock %}
