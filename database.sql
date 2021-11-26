@@ -61,11 +61,11 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `playlist` (`name`, `url`) VALUES
-("Sad Song", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX7qK8ma5wgG1?utm_source=generator'),
-("Ambiant Relaxation", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX3Ogo9pFvBkY'),
-("Happy Hits!", 'https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC?si=c6b32b4f2c1d48de'),
-("Chill Vibes", 'https://open.spotify.com/embed/playlist/37i9dQZF1DX889U0CL85jj?si=83349a9c65764347'),
-("Dance Hits 2000", 'https://open.spotify.com/embed/playlist/37i9dQZF1DWSj4n2q6ZYVe?si=16f62e9858b84a24');
+("Mélancolie", 'https://widget.deezer.com/widget/dark/playlist/1075547691?tracklist=false'),
+("Au coin du feu", 'https://widget.deezer.com/widget/dark/playlist/1083721131?tracklist=false'),
+("Happy Hits!", 'https://widget.deezer.com/widget/dark/playlist/1601999415?tracklist=false'),
+("Chill Vibes", 'https://widget.deezer.com/widget/dark/playlist/1290316405?tracklist=false'),
+("Dance Hits 2000", 'https://widget.deezer.com/widget/dark/playlist/1061059991?tracklist=false');
 
 --
 -- Ajout de données dans la table playlist
