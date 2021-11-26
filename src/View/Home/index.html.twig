@@ -10,11 +10,12 @@
             <button id="acceuil-button" type="submit">Ecoutez</button>
         </div>
     </form>
-
+    <br>
+    <h1 id="title"><span id="banana">Banana</span><span id="mood">Mood</span></h1>
 
     <iframe class="iframe" src="{{playlist.url}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="max-width: 100%"></iframe>
 
-    <h1 id="title"><span id="banana">Banana</span><span id="mood">Mood</span></h1>
+    
     
     <script>
 
@@ -30,6 +31,8 @@
             document.getElementById('haut').appendChild(document.getElementById('title'));
             document.getElementById('banana').style.color = "#fbe84e";
             document.getElementById('mood').style.color = "white";
+            documeny.body.style.backgroundImage = "none";
+            documeny.body.style.backgroundImage = "url(/assets/images/Banane_debout.svg)";
         }
 
         function affichage(){
