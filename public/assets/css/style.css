@@ -39,6 +39,7 @@ body::before {
     font-family: 'DM serif display';
     text-align: center;
     font-size: 3rem;
+    padding-top: 2rem;
 }
 
 .caVa{
