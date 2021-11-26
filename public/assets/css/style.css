@@ -29,7 +29,7 @@ body::before {
 
 .acceuil-form{
     margin-top: 30vh;
-    text-align: center;
+    align-items: center;
 }
 
 #masqued1 button{
@@ -78,14 +78,20 @@ body::before {
     color: #fbe84e;
 }
 
+legend{
+    text-decoration: none;
+    font-family: 'DM Serif Display';
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
 #answer{
     text-align: center;
-    width: 100%;
+
     border-radius: 30px; 
-    border: 1px solid black;
+    border: 2px solid black;
     background-color: #fdf2ab;
     padding: 0.5rem;
-    margin-top: 3rem;
     margin-bottom: 2rem;
     font-size: large;
 }
