@@ -22,6 +22,15 @@
         document.getElementById("masqued2").style.display = 'none';
 
         document.body.style.backgroundImage = "none";
+        
+        if(window.location.search === "")
+            setTimeout(affichage, 1500);
+        else{
+            document.body.style.backgroundColor = "black";
+            document.getElementById('haut').appendChild(document.getElementById('title'));
+            document.getElementById('banana').style.color = "#fbe84e";
+            document.getElementById('mood').style.color = "white";
+        }
 
         function affichage(){
             document.getElementById("masqued1").style.display = 'block';
@@ -31,18 +40,6 @@
             document.getElementById('haut').appendChild(document.getElementById('title'));
             document.getElementById('banana').style.color = "#fbe84e";
             document.getElementById('mood').style.color = "white";
-
-            //Aprés clique
-            document.getElementById("acceuil-button").addEventListener('click', function(){
-                document.getElementById("masqued1").style.display = 'none';
-                document.getElementById("masqued2").style.display = 'none';
-
-                document.body.style.backgroundColor = "black";
-
-            });
-        }        
-
-        setTimeout(affichage, 1500);
-        
+        }                
     </script>
 {% endblock %}
