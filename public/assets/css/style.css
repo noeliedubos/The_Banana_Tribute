@@ -7,9 +7,10 @@ body{
     background-color: #fdf2ab;
     background-image: url(/assets/images/bulle.png);
     background-repeat: no-repeat;
-    background-size: 100% 40%;
+    background-size: 100% 45%;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 body::before {
@@ -17,7 +18,7 @@ body::before {
     content: '';
     width: 100%;
     height: 50%;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url(/assets/images/Banane_peau.svg);
@@ -39,15 +40,17 @@ body::before {
     font-family: 'DM serif display';
     text-align: center;
     font-size: 3rem;
-    padding-top: 2rem;
+    margin-top: 0;
 }
+
 
 .caVa{
     color:white;
     font-size : 60px;
     font-family: 'DM Serif Display';
     margin-top: 0;
-
+    text-align: center;
+    line-height: 4rem;
 }
 
 #mood{
@@ -78,8 +81,8 @@ body::before {
     margin-bottom: 1rem;
 }
 
-    /* css playlist */
-
-.iframe{
-    height: auto;
+.decal{
+    margin-top: 20%;
 }
+
+    /* css playlist */
